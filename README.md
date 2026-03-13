@@ -1,50 +1,159 @@
-# Welcome to your Expo app 👋
+#  Food Ordering Mobile App – React Native (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+##  Demo Screenshots
 
-## Get started
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+# Project Overview
 
-2. Start the app
+This project is a **Food Ordering Mobile Application** built using **React Native with Expo** as part of an **Intern Task Assignment**.
 
-   ```bash
-   npx expo start
-   ```
+The app allows users to browse food categories, view food items, add them to a cart, adjust quantities, and place an order.
 
-In the output, you'll find options to open the app in a
+### Core Functionalities
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+✔ Browse food categories
+✔ View food items in each category
+✔ Add items to cart
+✔ Increase / decrease quantity
+✔ View subtotal and total price
+✔ Place order with confirmation alert
+✔ Smooth navigation between screens
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+# Tech Stack
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+React Native (Expo)
+React Navigation v6 (Stack Navigator + Bottom Tabs)
+React Context API (State Management)
+react-native-size-matters (Responsive design)
+expo-linear-gradient (UI styling)
+@expo/vector-icons (Icons)
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+# Quick Start
 
-To learn more about developing your project with Expo, look at the following resources:
+## Clone the Repository
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/yourusername/food-ordering-app.git
+cd food-ordering-app
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+##  Install Dependencies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm install
+```
+
+---
+
+##  Start the Application
+
+```bash
+npx expo start
+```
+
+### Run on
+
+**Mobile:** Scan the QR code using **Expo Go**
+**Web:** Press **w** in the terminal
+
+---
+
+# Project Structure
+
+```
+food-ordering-app
+│
+├── assets/              # Images and icons
+│
+├── screens/             # Application screens
+│   ├── HomeScreen.js
+│   ├── FoodListScreen.js
+│   ├── CartScreen.js
+│   ├── LoginScreen.js
+│   └── ProfileScreen.js
+│
+├── context/             # State management
+│   └── CartContext.js
+│
+├── data/                # Static data
+│   └── foodData.js
+│
+├── navigation/          # Navigation setup
+│   └── AppNavigator.js
+│
+└── App.js               # Entry point
+```
+
+---
+
+# Features Implemented
+
+| Screen          | Features                                        |
+| --------------- | ----------------------------------------------- |
+| **Home**        | Category grid layout with images                |
+| **Food List**   | Food cards with image, name, price, add to cart |
+| **Cart**        | Item list with quantity adjustment (+ / −)      |
+| **Cart Total**  | Subtotal and total price calculation            |
+| **Place Order** | Alert confirmation message                      |
+| **Navigation**  | Stack + Bottom Tab navigation                   |
+| **Bonus**       | Login screen and Profile screen                 |
+
+---
+
+# Navigation Flow
+
+```
+Login Screen
+     ↓
+Main App (Bottom Tabs)
+     ↓
+Home → Category → Food List
+Cart → Quantity Adjustment → Place Order
+Profile → User Information
+```
+
+---
+
+# Libraries Used
+
+```
+@react-navigation/native
+@react-navigation/bottom-tabs
+@react-navigation/stack
+expo-linear-gradient
+react-native-size-matters
+@expo/vector-icons
+```
+
+---
+
+#  Testing Commands
+
+Run the app on different platforms.
+
+```bash
+npx expo start           # Start Expo
+npx expo start --web     # Run on Web
+npx expo start --android # Android
+```
+
+---
+
+#  Supported Platforms
+
+✔ Android
+✔ iOS
+✔ Web
+
+Responsive design works on **mobile and tablets**.
+
+---
